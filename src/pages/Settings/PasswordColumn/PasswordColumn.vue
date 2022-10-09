@@ -4,7 +4,6 @@
       <v-text-field
         type="password"
         v-model="password"
-        :counter="10"
         :rules="rules"
         label="Пароль"
         required
@@ -14,7 +13,6 @@
         type="password"
         v-model="passwordCopy"
         :rules="copyRules"
-        :counter="10"
         label="Повторите пароль"
         required
         class="input"
@@ -30,7 +28,7 @@ export default {
     password:'',
     passwordCopy:'', 
     rules:[
-      v => v.length === 6 || 'Password should has 6 symbols'
+      v => v?.length === 6 || 'Password should has 6 symbols'
     ],
     copyRules:[
     ],

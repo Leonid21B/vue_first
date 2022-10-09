@@ -1,8 +1,14 @@
 <template>
   <header class='header'>
-    <v-btn height="50px" width="150px" class="header__btn">ГЛАВНАЯ</v-btn>
-    <v-btn height="50px" width="150px" class="header__btn">СПИСОК КУРСОВ</v-btn>
-    <v-btn height="50px" width="150px" class="header__btn">НАСТРОЙКИ</v-btn>
+    <router-link class="header__link" to="/">
+      <v-btn height="50px" width="150px" class="header__btn">ГЛАВНАЯ</v-btn>
+    </router-link>
+    <router-link class="header__link" to="/courses-list">
+      <v-btn height="50px" width="150px" class="header__btn">СПИСОК КУРСОВ</v-btn>
+    </router-link>
+    <router-link class="header__link" to="/courses-list">
+      <v-btn height="50px" width="150px" class="header__btn">НАСТРОЙКИ</v-btn>
+    </router-link>
   </header>
 </template>
 
@@ -27,6 +33,11 @@ export default {
     padding-left: 20vw;
   }
   .header__btn{
+    
     margin-right: 10vw;
+  }
+  .header__link{
+    text-decoration: none;
+    color:black;
   }
 </style>

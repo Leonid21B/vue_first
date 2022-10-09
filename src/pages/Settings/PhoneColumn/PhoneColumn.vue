@@ -3,7 +3,6 @@
     <h1 class="person-column__title">Email и номер телефона</h1>
       <v-text-field
           v-model="email"
-          :counter="10"
           :rules="emailRules"
           label="Email"
           required
@@ -27,11 +26,11 @@ export default {
     phone:'',
     email:'',
     phoneRules:[
-      v => v.length >= 10 || 'Phone is not valid'
+      v => v?.length >= 10 || 'Phone is not valid'
     ],
     emailRules:[
-      v => v.length > 5 || 'Email is not valid',
-      v => v.indexOf('@') > 0 || 'Email is not valid'
+      v => v?.length > 5 || 'Email is not valid',
+      v => v?.indexOf('@') > 0 || 'Email is not valid'
     ]
   }),
   created(){

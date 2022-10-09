@@ -12,12 +12,17 @@
       <v-col class="column-inputs">
         <phone-column @setField='setField'/>
         <v-btn 
-        color="green"
-        
-        class="mr-4 wrapper__button"
+        color="success"
+        class="mr-4 wrapper__button-left"
         type="submit"
         >Сохранить</v-btn>
+        <v-btn 
+        color="error"
+        class="mr-4 wrapper__button"
+        type="reset"
+        >Отмена</v-btn>
       </v-col>
+      
       <v-col class="column-inputs">
         <password-column @setField='setField'/>
       </v-col>
@@ -92,8 +97,7 @@ export default {
   .column-inputs{
     padding: 0 60px;
   }
-  .wrapper__button{
-    color:white;
-    cursor: pointer;
+  .wrapper__button-left{
+    margin-left: 60px;
   }
 </style>

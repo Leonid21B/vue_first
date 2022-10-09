@@ -3,7 +3,6 @@
     <h1 class="person-column__title">ФИО</h1>
     <v-text-field
         v-model="name"
-        :counter="10"
         :rules="rules"
         label="Name"
         required
@@ -11,7 +10,6 @@
       />
     <v-text-field
       v-model="surName"
-      :counter="10"
       :rules="rules"
       label="Surname"
       required
@@ -19,9 +17,8 @@
     />
     <v-text-field
       v-model="pathName"
-      :counter="10"
       :rules="rules"
-      label="Patrname"
+      label="Pathname"
       required
       class="input"
     />
@@ -36,7 +33,7 @@ export default {
     surName:'',
     pathName:'',
     rules:[
-      v => v.length > 0 || 'Empty'
+      v => v?.length > 0 || 'Empty'
     ]
   }),
   created(){
